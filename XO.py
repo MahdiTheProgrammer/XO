@@ -43,6 +43,7 @@ def WinnerFounder(table):
         if nO == 3:
             TIAW = True
             w = "You lost"
+        
     # For a cross
     if table[0][0] == "X" and table[1][1] == "X" and table[2][2] == "X" and TIAW == False:
         TIAW = True
@@ -56,9 +57,13 @@ def WinnerFounder(table):
     if table[0][2] == "O" and table[1][1] == "O" and table[2][0] == "O" and TIAW == False:
         TIAW = True
         w = "You lost"
+    
+    if w == "":
+        w = "Equal"
 
     return TIAW, w
-
+def Computerturn():
+    pass
 
 for f1 in range(x):
     if TIAW == True:
