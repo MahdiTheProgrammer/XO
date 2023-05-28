@@ -117,19 +117,31 @@ function add_chois(s,num){
     if (check_winner(matris)==true){//check
 
         if(turn=="O"){
-            t="X"
-            o_point+=1
+            t="X";
+            o_point+=1;
         }
         else{
-            t="O"
-            x_point+=1
+            t="O";
+            x_point+=1;
         }
         // document.getElementById("text").innerHTML =t+" won!.";
+        //document.getElementsByClassName("kibord").innerHTML=t+" won!";
 
         console.log("resid");
+
+        document.getElementById("kibord").innerHTML=t+" WON!";
         // document.getElementsByid("popup").style.display='';
         var divElement = document.getElementById('popup');
         divElement.style.display = 'block';
+    }
+    else{
+        if (matris[0]!=0 && matris[1]!=0 && matris[2]!=0 && matris[3]!=0 &&
+             matris[4]!=0 && matris[5]!=0 && matris[6]!=0 && matris[7]!=0 &&
+              matris[8]!=0 && matris[9]!=0){
+            document.getElementById("kibord").innerHTML="DRAW!";
+            var divElement = document.getElementById('popup');
+            divElement.style.display = 'block';
+        }
     }
 
 }
